@@ -1,112 +1,273 @@
-<nav>
-    <div><strong>Miracle</strong></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agoblom Miracle | Digital Marketing</title>
 
+<style>
+
+/* COLORS */
+:root {
+    --bg: #0d0f0d;
+    --text: #f5f5f5;
+    --muted: #a1a1a1;
+    --olive: #556b2f;
+    --olive-soft: #6e8447;
+    --border: #1c1f1c;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    position: sticky;
+    top: 0;
+    background: rgba(13,15,13,0.7);
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 25px;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background: var(--olive);
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    animation: fadeUp 1.2s ease;
+}
+
+.hero h1 {
+    font-size: 60px;
+    max-width: 700px;
+    line-height: 1.1;
+}
+
+.hero h1 span {
+    color: var(--olive-soft);
+}
+
+.hero p {
+    color: var(--muted);
+    margin-top: 20px;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 25px;
+    padding: 14px 30px;
+    border: 1px solid var(--olive);
+    color: var(--olive);
+    text-decoration: none;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--olive);
+    color: black;
+}
+
+/* SECTION */
+section {
+    padding: 80px 10%;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--olive);
+}
+
+/* GALLERY */
+.gallery img, .gallery video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* TESTIMONIAL */
+.testimonial p {
+    font-style: italic;
+    color: #ccc;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <div><strong>Agoblom Miracle</strong></div>
     <div>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="work.html">Work</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Work</a>
+        <a href="#">Reviews</a>
+        <a href="#">Contact</a>
     </div>
 </nav>
 
-<section>
-    <h2>Brands I've Worked With</h2>
+<!-- HERO -->
+<section class="hero">
+    <h1>
+        I help brands move from <span>content noise</span> to structured digital growth.
+    </h1>
+
+    <p>
+        Digital marketer focused on clarity, positioning, and systems that convert.
+    </p>
+
+    <a href="#" class="btn">Book a Call</a>
+</section>
+
+<!-- SERVICES -->
+<section class="reveal">
+    <h2>What I Do</h2>
 
     <div class="grid">
+        <div class="card">Strategy & Positioning</div>
+        <div class="card">Content Systems</div>
+        <div class="card">Growth Direction</div>
+    </div>
+</section>
 
+<!-- CLIENTS -->
+<section class="reveal">
+    <h2>Brands I’ve Worked With</h2>
+
+    <div class="grid">
         <div class="card">AO Spices</div>
-        <div class="card">Client Brand 1</div>
-        <div class="card">Client Brand 2</div>
-
+        <div class="card">Client Brand</div>
+        <div class="card">Client Brand</div>
     </div>
 </section>
 
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="style.css">
-<title>Reviews</title>
-</head>
+<!-- WORK -->
+<section class="reveal">
+    <h2>Proof of Work</h2>
 
-<body>
+    <div class="grid gallery">
+        <img src="https://via.placeholder.com/400">
+        <img src="https://via.placeholder.com/400">
+        <video src="" controls></video>
+    </div>
+</section>
 
-<nav>...</nav>
-
-<section>
-    <h1>Client Reviews</h1>
+<!-- TESTIMONIALS -->
+<section class="reveal">
+    <h2>What Clients Say</h2>
 
     <div class="grid">
 
-        <div class="card">
-            <p>
-                "Working with Esther brought structure to our content. Everything became clearer and more intentional."
-            </p>
-            <strong>- AO Spices</strong>
+        <div class="card testimonial">
+            <p>"She brought clarity to everything we were doing."</p>
         </div>
 
-        <div class="card">
-            <p>
-                "She doesn’t just post content. She thinks. And that changed everything for our brand."
-            </p>
-            <strong>- Client Name</strong>
-        </div>
-
-        <div class="card">
-            <p>
-                "Our engagement became consistent because there was finally a system behind it."
-            </p>
-            <strong>- Client Name</strong>
+        <div class="card testimonial">
+            <p>"It felt like we finally had direction."</p>
         </div>
 
     </div>
 </section>
 
-</body>
-</html>
+<!-- CTA -->
+<section class="reveal">
+    <h2>
+        If you're building something that needs clarity and structure, let’s talk.
+    </h2>
 
-<img src="images/logo1.png" style="height:50px;">
-
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="style.css">
-<title>Reviews</title>
-</head>
-
-<body>
-
-<nav>...</nav>
-
-<section>
-    <h1>Client Reviews</h1>
-
-    <div class="grid">
-
-        <div class="card">
-            <p>
-                "Working with Esther brought structure to our content. Everything became clearer and more intentional."
-            </p>
-            <strong>- AO Spices</strong>
-        </div>
-
-        <div class="card">
-            <p>
-                "She doesn’t just post content. She thinks. And that changed everything for our brand."
-            </p>
-            <strong>- Client Name</strong>
-        </div>
-
-        <div class="card">
-            <p>
-                "Our engagement became consistent because there was finally a system behind it."
-            </p>
-            <strong>- Client Name</strong>
-        </div>
-
-    </div>
+    <a href="#" class="btn">Book a Discovery Call</a>
 </section>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+    reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (top < windowHeight - 100) {
+            el.classList.add('active');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
